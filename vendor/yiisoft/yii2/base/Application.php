@@ -439,7 +439,7 @@ abstract class Application extends Module
     public function getVendorPath()
     {
         if ($this->_vendorPath === null) {
-            $this->setVendorPath($this->getBasePath() . DIRECTORY_SEPARATOR . 'vendor');
+            $this->setVendorPath(dirname($this->getBasePath()) . DIRECTORY_SEPARATOR . 'yii2framework' . DIRECTORY_SEPARATOR . 'vendor');
         }
 
         return $this->_vendorPath;
